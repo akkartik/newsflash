@@ -1,18 +1,11 @@
-require 'rubygems'
 require 'rfeedparser'
 
 def updateAllFeeds
-  File.read('feeds').each do |url|
-    p = rfp(url)
-    next if p.entries.empty?
-    p p.href
-    p p.channel.link
-    p p.entries[0].keys
-#?     rfp(url).entries.each do |entry|
-#?       puts entry.link
-#?     end
+  File.read("#{RAILS_ROOT}/feeds").each do |url|
+    parsedFeed = rfp(url)
+    parsedFeed.entries.each do |entry|
+      Post.create_or_update :url => entry.link, :title => entry.title, :feedurl => p.channel.link, :feedtitle => p.channel.title
+    end
     break
   end
 end
-
-updateAllFeeds
