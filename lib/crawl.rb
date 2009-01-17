@@ -15,5 +15,12 @@ def fetch(uri_str, limit = 10)
   end
 end
 
-response, body = fetch('http://google.com')
-p body
+File.read('feeds').each do |feed|
+  begin
+    p feed
+    response, body = fetch(feed)
+    p body
+  rescue => e
+    p e
+  end
+end
