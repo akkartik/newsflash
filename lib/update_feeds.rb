@@ -1,7 +1,8 @@
 require 'rfeedparser'
 
 def updateAllFeeds
-  File.read("#{RAILS_ROOT}/feeds").each do |url|
+  File.read("#{RAILS_ROOT}/config/feeds").each do |url|
+    puts url
     parsedFeed = rfp(url)
     parsedFeed.entries.each do |entry|
       fields = {:url => entry.link, :title => entry.title, :feedurl => parsedFeed.channel.link, :feedtitle => parsedFeed.channel.title}
