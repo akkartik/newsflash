@@ -16,3 +16,6 @@ Remove id field.
 =-=8 - Tue Jan 20 10:05:54 PST 2009
 Turns out we do need id field for yaml fixtures.
 =-=9 - Tue Jan 20 10:42:30 PST 2009
+
+Bugfix: get contents from crawled feeds.
+=-=10 - Tue Jan 20 10:47:36 PST 2009

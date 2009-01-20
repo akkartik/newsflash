@@ -5,7 +5,7 @@ def updateAllFeeds
     puts url
     parsedFeed = rfp(url)
     parsedFeed.entries.each do |entry|
-      fields = {:url => entry.link, :title => entry.title, :feedurl => parsedFeed.channel.link, :feedtitle => parsedFeed.channel.title}
+      fields = {:url => entry.link, :title => entry.title, :feedurl => parsedFeed.channel.link, :feedtitle => parsedFeed.channel.title, :contents => entry.description}
       p = Post.find_or_create_by_url fields
       p.update_attributes fields
       p.save
