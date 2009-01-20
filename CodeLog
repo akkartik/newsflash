@@ -7,3 +7,5 @@ No need for a download step. Just use feedparser.
 =-=4 - Sat Jan 17 14:00:45 PST 2009
 Setup task to import feeds.
 =-=5 - Sat Jan 17 15:40:19 PST 2009
+Import feeds done. Now let's get it working on slicehost repo.
+=-=6 - Mon Jan 19 20:35:19 PST 2009
