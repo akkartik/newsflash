@@ -1,6 +1,6 @@
 class CreatePosts < ActiveRecord::Migration
   def self.up
-    create_table :posts do |t|
+    create_table :posts, :id => false do |t|
       t.string :url, :primary_key => true
       t.string :title
       t.string :feedurl
