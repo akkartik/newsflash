@@ -23,3 +23,4 @@ Bugfix: get contents from crawled feeds.
 Hyp: "execution expired' is because of Timeout::Error:
   http://www.slashdotdash.net/2008/02/15/ruby-tidbit-timeout-code-execution
 =-=11 - Tue Jan 20 18:31:32 PST 2009
+=-=12 - Tue Jan 20 18:35:16 PST 2009
