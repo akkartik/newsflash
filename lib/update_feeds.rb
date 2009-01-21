@@ -1,7 +1,7 @@
 require 'rfeedparser'
 
 def updateAllFeeds
-  File.read("#{RAILS_ROOT}/config/feeds").each do |url|
+  File.read(FEED_FILE).each do |url|
     puts url
     begin
       parsedFeed = rfp(url)

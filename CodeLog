@@ -24,3 +24,8 @@ Hyp: "execution expired' is because of Timeout::Error:
   http://www.slashdotdash.net/2008/02/15/ruby-tidbit-timeout-code-execution
 =-=11 - Tue Jan 20 18:31:32 PST 2009
 =-=12 - Tue Jan 20 18:35:16 PST 2009
+
+Feed crawler still not working properly - title and content of all feeds is
+borked.
+It's becoming clear that's where all the complexity is. The front-end is easy.
+=-=15 - Wed Jan 21 10:52:54 PST 2009
