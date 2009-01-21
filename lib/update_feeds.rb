@@ -1,22 +1,5 @@
 require 'rfeedparser'
 
-def retryTimeout(num=10)
-  until num < 0
-    begin
-      yield
-    rescue Timeout::Error
-      puts "timeout #{num}"
-      num -= 1
-    end
-  end
-end
-
-def getFeedWithRetries(url)
-  retryTimeout do
-    rfp(url)
-  end
-end
-
 def updateAllFeeds
   File.read("#{RAILS_ROOT}/config/feeds").each do |url|
     puts url
