@@ -19,3 +19,7 @@ Turns out we do need id field for yaml fixtures.
 
 Bugfix: get contents from crawled feeds.
 =-=10 - Tue Jan 20 10:47:36 PST 2009
+
+Hyp: "execution expired' is because of Timeout::Error:
+  http://www.slashdotdash.net/2008/02/15/ruby-tidbit-timeout-code-execution
+=-=11 - Tue Jan 20 18:31:32 PST 2009
