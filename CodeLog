@@ -29,3 +29,8 @@ Feed crawler still not working properly - title and content of all feeds is
 borked.
 It's becoming clear that's where all the complexity is. The front-end is easy.
 =-=15 - Wed Jan 21 10:52:54 PST 2009
+Turns out most of the misbehaving feeds are atom - we aren't handling atom
+feeds properly.
+Some others have content but seemingly no permalink.
+I did this triage on the air.
+=-=16 - Wed Jan 21 19:12:17 PST 2009
