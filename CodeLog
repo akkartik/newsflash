@@ -51,3 +51,8 @@ Feed crawler daemonified.
 =-=23 - Thu Jan 22 07:37:42 PST 2009
 Standardized feed file location between slicehost and air.
 =-=24 - Thu Jan 22 07:56:10 PST 2009
+
+First-cut implementation for the workhorse homepage. No update yet, all it
+does is show most recent post from first feed.
+Already we find an error in our db schema and crawler.
+=-=25 - Thu Jan 22 08:24:05 PST 2009

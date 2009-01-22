@@ -75,3 +75,4 @@ Rails::Initializer.run do |config|
 end
 
 FEED_FILE = RAILS_ROOT+'/config/feeds'
+$FEEDS = File.new(FEED_FILE).read.split

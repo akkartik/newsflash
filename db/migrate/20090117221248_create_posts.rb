@@ -3,8 +3,9 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.string :url, :primary_key => true
       t.string :title
+      t.string :home
+      t.string :homeurl
       t.string :feedurl
-      t.string :feedtitle
       t.text :contents
       t.boolean :doneReading, :default => false
       t.timestamps

@@ -5,7 +5,7 @@ def atomPermalink(entry)
 end
 
 def updateAllFeeds
-  File.read(FEED_FILE).each do |feedUrl|
+  $FEEDS.each do |feedUrl|
     puts feedUrl
     begin
       parsedFeed = rfp(feedUrl)
@@ -18,7 +18,8 @@ def updateAllFeeds
       description = entry.description || entry.summary || entry.content[0].value
       url = entry.link || atomPermalink(entry)
 
-      fields = {:url => url, :title => entry.title, :contents => description, :feedurl => feedUrl, :feedtitle => parsedFeed.channel.title}
+      fields = {:url => url, :title => entry.title, :contents => description,
+          :feedurl => feedUrl, :homeurl => parsedFeed.channel.link, :hometitle => parsedFeed.channel.title}
       post = Post.find_or_create_by_url fields
       post.update_attributes fields
       post.save
