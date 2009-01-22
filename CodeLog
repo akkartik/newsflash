@@ -58,3 +58,7 @@ Already we find an error in our db schema and crawler.
 =-=25 - Thu Jan 22 08:24:05 PST 2009
 Back-end done for AJAX update. Not properly connected up with view yet.
 =-=26 - Thu Jan 22 10:08:38 PST 2009
+View connected up, but not updated yet. Should I really be using show for the
+remote_link? Shouldn't it be update? Also need to set doneReading, and skip
+posts we're doneReading, and retry next feedurl if this one has nothing.
+=-=27 - Thu Jan 22 10:14:59 PST 2009

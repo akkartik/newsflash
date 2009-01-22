@@ -5,13 +5,13 @@ describe PostsController do
 
   describe 'show' do
     it 'should show given piece' do
-      get :show, :id => posts(:one).url
+      get :show, :url => posts(:one).url
       response.should render_template('posts/show')
       assigns(:post).url.should == posts(:one).url
     end
 
     it 'should show most recent piece from _next_ feed' do
-      get :show, :id => posts(:one).url, :next => true
+      get :show, :id => '0', :url => posts(:one).url, :next => true
       response.should render_template('posts/show')
       assigns(:post).url.should == posts(:six).url
     end
