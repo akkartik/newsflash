@@ -47,3 +47,5 @@ Reverse the feed entries - that way we only need to sort by id descending
 within a feed, and diversity means we don't care about parsing times,
 timezones, any of that crap.
 =-=22 - Thu Jan 22 07:22:30 PST 2009
+Feed crawler daemonified.
+=-=23 - Thu Jan 22 07:37:42 PST 2009

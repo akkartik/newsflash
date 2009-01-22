@@ -2,6 +2,6 @@ require 'update_feeds'
 
 namespace :feeds do
   task :update => :environment do
-    updateAllFeeds
+    feedUpdateDaemon
   end
 end
