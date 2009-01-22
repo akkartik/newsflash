@@ -47,5 +47,5 @@ Spec::Runner.configure do |config|
 end
 
 def resetFeeds
-  $FEEDS = ['http://one.example.com/atom.xml', 'http://two.example.com/atom.xml']
+  $FEEDS = ['http://one.example.com/atom.xml', 'http://two.example.com/atom.xml', 'http://three.example.com/atom.xml']
 end

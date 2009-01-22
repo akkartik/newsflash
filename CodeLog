@@ -62,3 +62,5 @@ View connected up, but not updated yet. Should I really be using show for the
 remote_link? Shouldn't it be update? Also need to set doneReading, and skip
 posts we're doneReading, and retry next feedurl if this one has nothing.
 =-=27 - Thu Jan 22 10:14:59 PST 2009
+Add fixture for feed with all read posts as a first step.
+=-=28 - Thu Jan 22 10:18:32 PST 2009

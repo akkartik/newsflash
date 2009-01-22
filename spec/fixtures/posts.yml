@@ -1,6 +1,6 @@
 one:
   id: 1
-  url: http://one.example.com/57771.html
+  url: http://one.example.com/1.html
   title: Title one
   homeurl: http://one.example.com
   home: Blog one
@@ -9,7 +9,7 @@ one:
 
 two:
   id: 2
-  url: http://two.example.com/57771.html
+  url: http://two.example.com/1.html
   title: Title two
   homeurl: http://two.example.com
   home: Blog two
@@ -18,7 +18,7 @@ two:
 
 three:
   id: 3
-  url: http://one.example.com/57772.html
+  url: http://one.example.com/2.html
   title: Title three
   homeurl: http://one.example.com
   home: Blog one
@@ -27,7 +27,7 @@ three:
 
 four:
   id: 4
-  url: http://two.example.com/57772.html
+  url: http://two.example.com/2.html
   title: Title four
   homeurl: http://two.example.com
   home: Blog two
@@ -37,7 +37,7 @@ four:
 
 five:
   id: 5
-  url: http://one.example.com/57773.html
+  url: http://one.example.com/3.html
   title: Title five
   homeurl: http://one.example.com
   home: Blog one
@@ -47,9 +47,19 @@ five:
 
 six:
   id: 6
-  url: http://two.example.com/57773.html
+  url: http://two.example.com/3.html
   title: Title six
   homeurl: http://two.example.com
   home: Blog two
   feedurl: http://two.example.com/atom.xml
   contents: body six
+
+seven:
+  id: 7
+  url: http://three.example.com/1.html
+  title: Title seven
+  homeurl: http://three.example.com
+  home: Blog three
+  feedurl: http://three.example.com/atom.xml
+  contents: body seven
+  doneReading: true
