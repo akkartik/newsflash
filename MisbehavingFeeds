@@ -1,0 +1,8 @@
+$ grep "^title: " x |sort |freq
+title: true false true 150
+  http://nothingventurednothinggained.blogspot.com/atom.xml
+  http://rondam.blogspot.com/feeds/posts/default
+  http://steve-yegge.blogspot.com/atom.xml
+  http://v-slog.blogspot.com/feeds/posts/default
+  http://www.bakerpacific.com/blog/atom.xml
+  http://www.gigamonkeys.com/blog/feed.atom
