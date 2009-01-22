@@ -15,18 +15,16 @@ def updateAllFeeds
     end
 
     parsedFeed.entries.each do |entry|
-      description = entry.description || entry.content[0].value
-      url = entry.link || atomPermalink(entry)
-#?       url = entry.link || entry.links[-1].href
-      p url
-#?       puts "title: #{!entry.title.nil?} #{!url.nil?} #{!description.nil?}"
-#?       p entry
-      break
+      description = entry.description || entry.summary || entry.content[0].value
+      p description if description.length <= 3
+      entry.content.each{|x| p " #{x.value}"} if description.length <= 3 && !entry.content.nil?
+#?       url = entry.link || atomPermalink(entry)
 
-#?       fields = {:url => entry.link, :title => entry.title, :feedurl => feedUrl, :feedtitle => parsedFeed.channel.title, :contents => entry.description}
-#?       p = Post.find_or_create_by_url fields
-#?       p.update_attributes fields
-#?       p.save
+#?       fields = {:url => url, :title => entry.title, :contents => description, :feedurl => feedUrl, :feedtitle => parsedFeed.channel.title}
+#?       p fields
+#?       post = Post.find_or_create_by_url fields
+#?       post.update_attributes fields
+#?       post.save
     end
   end
 end

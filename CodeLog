@@ -37,3 +37,6 @@ I did this triage on the air.
 =-=17 - Wed Jan 21 19:12:39 PST 2009
 Now we know how to handle atom feeds.
 =-=18 - Wed Jan 21 20:05:24 PST 2009
+Descriptions are sometimes not getting parsed right. File encoding issues,
+perhaps.
+=-=19 - Wed Jan 21 20:42:54 PST 2009
