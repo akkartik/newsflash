@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   end
 
   def self.most_recent_post(feedUrl)
-    Post.find :first, :conditions => ["feedurl = ?", feedUrl], :order => "id desc"
+    Post.find :first, :conditions => ["feedurl = ? and doneReading = 'f'", feedUrl], :order => "id desc"
   end
 
   def self.feed_for_post(url)
@@ -16,7 +16,8 @@ class Post < ActiveRecord::Base
   end
 
   def self.most_recent_from_next_feed(url)
-    nextFeedIndex = ($FEEDS.index(feed_for_post(url))+1) % $FEEDS.length
-    most_recent_post($FEEDS[nextFeedIndex])
+    begin
+      nextFeedIndex = ($FEEDS.index(feed_for_post(url))+1) % $FEEDS.length
+    end until most_recent_post($FEEDS[nextFeedIndex])
   end
 end

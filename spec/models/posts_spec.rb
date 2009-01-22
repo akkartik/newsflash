@@ -10,9 +10,8 @@ describe Post do
   end
 
   describe 'most_recent_post' do
-    it 'should return most recent post for a feed' do
-      Post.most_recent_post(Post.first_feed).should_not be_nil
-      Post.most_recent_post(Post.first_feed).url.should == posts(:five).url
+    it 'should return most recent unread post for a feed' do
+      Post.most_recent_post(Post.first_feed).url.should == posts(:three).url
     end
   end
 
@@ -29,8 +28,12 @@ describe Post do
   end
 
   describe 'most_recent_from_next_feed' do
-    it 'should work' do
+    it 'should return most recent unread post from next feed' do
       Post.most_recent_from_next_feed(posts(:one).url).should == posts(:six)
+    end
+
+    it 'should skip feeds with no unread posts' do
+      Post.most_recent_from_next_feed(posts(:two).url).should == posts(:three)
     end
   end
 end

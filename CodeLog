@@ -64,3 +64,5 @@ posts we're doneReading, and retry next feedurl if this one has nothing.
 =-=27 - Thu Jan 22 10:14:59 PST 2009
 Add fixture for feed with all read posts as a first step.
 =-=28 - Thu Jan 22 10:18:32 PST 2009
+First cut at support for doneReading.
+=-=29 - Thu Jan 22 10:29:19 PST 2009
