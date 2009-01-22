@@ -70,3 +70,7 @@ doneReading done. most_recent_from_next_feed is ugly, though.
 =-=30 - Thu Jan 22 10:34:51 PST 2009
 Clean.
 =-=31 - Thu Jan 22 10:40:02 PST 2009
+
+Crawler. I need a way to detect illegal junk that's going to throw off sql.
+Maybe sql-escape and unescape.
+=-=32 - Thu Jan 22 10:46:34 PST 2009

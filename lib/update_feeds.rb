@@ -15,11 +15,15 @@ def updateAllFeeds
     end
 
     parsedFeed.entries.reverse.each do |entry|
-      description = entry.description || entry.summary || entry.content[0].value
+      description = entry.description || entry.summary || entry.content[0].value rescue ""
+      description = "" if description.length <= 10
       url = entry.link || atomPermalink(entry)
+      title = entry.title
+      p title.length
+      title = "" if title.length <= 10
 
-      fields = {:url => url, :title => entry.title, :contents => description,
-          :feedurl => feedUrl, :homeurl => parsedFeed.channel.link, :hometitle => parsedFeed.channel.title}
+      fields = {:url => url, :title => title, :contents => description,
+          :feedurl => feedUrl, :homeurl => parsedFeed.channel.link, :home => parsedFeed.channel.title}
       post = Post.find_or_create_by_url fields
       post.update_attributes fields
       post.save
