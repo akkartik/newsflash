@@ -1,1 +1,5 @@
-<h1><%= @post.title %></h1>
+<h3><%= @post.title %></h3>
+<%= @post.contents %>
+
+<%= link_to_remote("next&rarr;", :url => formatted_post_path(@post, :js), :with => "'next=true'") %>
+<!-- %= link_to_remote("edit tags&rarr;", :url => formatted_edit_user_profile_path(@user, :js), :with => "'field=tags'", :method => :get, :loading => show_spinner('tags'), :html => { :id => 'profile_edit_tags'}) % -->

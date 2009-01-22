@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def show
-    @post = Post.find_by_url params[:id]
+    return @post = Post.most_recent_from_next_feed(params[:id]) if params[:next]
+    @post = Post.find_by_url(params[:id])
   end
 
   def index

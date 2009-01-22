@@ -56,3 +56,5 @@ First-cut implementation for the workhorse homepage. No update yet, all it
 does is show most recent post from first feed.
 Already we find an error in our db schema and crawler.
 =-=25 - Thu Jan 22 08:24:05 PST 2009
+Back-end done for AJAX update. Not properly connected up with view yet.
+=-=26 - Thu Jan 22 10:08:38 PST 2009

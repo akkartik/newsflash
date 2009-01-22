@@ -1,6 +1,55 @@
 one:
-  url: http://abstractstuff.livejournal.com/57771.html
-  title: foo
-  feedurl: http://abstractstuff.livejournal.com
-  feedtitle: Prehacked
-  contents: foo bar oo
+  id: 1
+  url: http://one.example.com/57771.html
+  title: Title one
+  homeurl: http://one.example.com
+  home: Blog one
+  feedurl: http://one.example.com/atom.xml
+  contents: body one
+
+two:
+  id: 2
+  url: http://two.example.com/57771.html
+  title: Title two
+  homeurl: http://two.example.com
+  home: Blog two
+  feedurl: http://two.example.com/atom.xml
+  contents: body two
+
+three:
+  id: 3
+  url: http://one.example.com/57772.html
+  title: Title three
+  homeurl: http://one.example.com
+  home: Blog one
+  feedurl: http://one.example.com/atom.xml
+  contents: body three
+
+four:
+  id: 4
+  url: http://two.example.com/57772.html
+  title: Title four
+  homeurl: http://two.example.com
+  home: Blog two
+  feedurl: http://two.example.com/atom.xml
+  contents: body four
+  doneReading: true
+
+five:
+  id: 5
+  url: http://one.example.com/57773.html
+  title: Title five
+  homeurl: http://one.example.com
+  home: Blog one
+  feedurl: http://one.example.com/atom.xml
+  contents: body five
+  doneReading: true
+
+six:
+  id: 6
+  url: http://two.example.com/57773.html
+  title: Title six
+  homeurl: http://two.example.com
+  home: Blog two
+  feedurl: http://two.example.com/atom.xml
+  contents: body six
