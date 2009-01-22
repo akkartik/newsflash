@@ -1,6 +1,6 @@
 #!/usr/bin/zsh
 
 (
-    rake feeds:update $* >out 2>err
+    rake --trace feeds:update $* >out 2>err
     echo "agg2 Exit" |sendmail $ME
 ) >& /dev/null &
