@@ -14,7 +14,7 @@ def updateAllFeeds
       next
     end
 
-    parsedFeed.entries.each do |entry|
+    parsedFeed.entries.reverse.each do |entry|
       description = entry.description || entry.summary || entry.content[0].value
       url = entry.link || atomPermalink(entry)
 

@@ -43,3 +43,7 @@ perhaps.
 Cleanup.
 =-=20 - Wed Jan 21 20:52:27 PST 2009
 =-=21 - Wed Jan 21 21:03:10 PST 2009
+Reverse the feed entries - that way we only need to sort by id descending
+within a feed, and diversity means we don't care about parsing times,
+timezones, any of that crap.
+=-=22 - Thu Jan 22 07:22:30 PST 2009
