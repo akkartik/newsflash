@@ -19,7 +19,6 @@ def updateAllFeeds
       url = entry.link || atomPermalink(entry)
 
       fields = {:url => url, :title => entry.title, :contents => description, :feedurl => feedUrl, :feedtitle => parsedFeed.channel.title}
-      p fields
       post = Post.find_or_create_by_url fields
       post.update_attributes fields
       post.save
