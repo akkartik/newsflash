@@ -16,8 +16,13 @@ class Post < ActiveRecord::Base
   end
 
   def self.most_recent_from_next_feed(url)
+    i=0
+    ans = nil
+    nextFeedIndex = $FEEDS.index(feed_for_post(url))
     begin
-      nextFeedIndex = ($FEEDS.index(feed_for_post(url))+1) % $FEEDS.length
-    end until most_recent_post($FEEDS[nextFeedIndex])
+      nextFeedIndex = (nextFeedIndex+1) % $FEEDS.length
+      ans = most_recent_post($FEEDS[nextFeedIndex])
+    end until ans || (i+=1) == $FEEDS.length
+    ans
   end
 end

@@ -66,3 +66,5 @@ Add fixture for feed with all read posts as a first step.
 =-=28 - Thu Jan 22 10:18:32 PST 2009
 First cut at support for doneReading.
 =-=29 - Thu Jan 22 10:29:19 PST 2009
+doneReading done. most_recent_from_next_feed is ugly, though.
+=-=30 - Thu Jan 22 10:34:51 PST 2009
