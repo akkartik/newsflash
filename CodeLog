@@ -84,3 +84,8 @@ that the id is actually changing itself? Let's try replace_html instead.
 =-=34 - Fri Jan 23 07:29:31 PST 2009
 Done, but still not working.
 =-=35 - Fri Jan 23 07:33:47 PST 2009
+It's a property of certain feeds!! When the next feed is raganwald's the
+update doesn't happen. WTF!?
+Also found that I did indeed need to strip surrounding quotes from rfeedparser
+output.
+=-=36 - Fri Jan 23 07:40:34 PST 2009

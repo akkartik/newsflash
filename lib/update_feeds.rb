@@ -4,6 +4,10 @@ def atomPermalink(entry)
   entry.links.select{|elem| ['alternate', "'alternate'"].include? elem['rel']}[0].href
 end
 
+def stripQuotes(s)
+  s.gsub(/^['"]|['"]$/, '')
+end
+
 def updateAllFeeds
   $FEEDS.each do |feedUrl|
     puts feedUrl
@@ -21,9 +25,9 @@ def updateAllFeeds
       title = entry.title
       title = "" if title.nil? || title.length <= 10
 
-      fields = {:url => url, :title => title,
-          :contents => description,
-          :feedurl => feedUrl, :homeurl => parsedFeed.channel.link, :home => parsedFeed.channel.title}
+      fields = {:url => stripQuotes(url), :title => stripQuotes(title),
+          :contents => stripQuotes(description),
+          :feedurl => stripQuotes(feedUrl), :homeurl => stripQuotes(parsedFeed.channel.link), :home => stripQuotes(parsedFeed.channel.title)}
       post = Post.find_or_create_by_url fields
       post.update_attributes fields
       post.save
