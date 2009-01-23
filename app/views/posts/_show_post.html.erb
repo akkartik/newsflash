@@ -1,9 +1,7 @@
-<div id='curr_post'>
-  <div class='nav'>
-    <div class='title'><%= link_to @post.title, @post.url %></div>
-    <div class='subtitle'><%= link_to @post.home, @post.homeurl %></div>
-  </div>
+<div class='nav'>
+  <div class='title'><%= link_to @post.title, @post.url %></div>
+  <div class='subtitle'><%= link_to @post.home, @post.homeurl %></div>
+</div>
 
 <%= @post.contents %>
 <%= link_to_remote("next&rarr;", :url => formatted_post_path(@post, :js), :method => :put, :with => "'url=#{@post.url}&next=true'") %>
-</div>
