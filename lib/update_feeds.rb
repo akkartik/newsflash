@@ -23,11 +23,13 @@ def updateAllFeeds
       description = "" if description.length <= 10
       url = entry.link || atomPermalink(entry)
       title = entry.title
-      title = "" if title.nil? || title.length <= 10
+      title = "###" if title.blank? || title.length <= 10
+      home = parsedFeed.channel.title
+      home = "#" if home.blank?
 
       fields = {:url => stripQuotes(url), :title => stripQuotes(title),
           :contents => stripQuotes(description),
-          :feedurl => stripQuotes(feedUrl), :homeurl => stripQuotes(parsedFeed.channel.link), :home => stripQuotes(parsedFeed.channel.title)}
+          :feedurl => stripQuotes(feedUrl), :homeurl => stripQuotes(parsedFeed.channel.link), :home => stripQuotes(home)}
       post = Post.find_or_create_by_url fields
       post.update_attributes fields
       post.save
@@ -39,6 +41,6 @@ def feedUpdateDaemon
   while(1)
     updateAllFeeds
     puts "sleeping"
-    sleep 60*60
+    sleep 60*60*23
   end
 end

@@ -3,15 +3,9 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe Post do
   before(:each) do resetFeeds; end
 
-  describe 'first_feed' do
-    it 'should return first feed from $FEEDS list' do
-      Post.first_feed.should == $FEEDS[0]
-    end
-  end
-
   describe 'most_recent_post' do
     it 'should return most recent unread post for a feed' do
-      Post.most_recent_post(Post.first_feed).url.should == posts(:three).url
+      Post.most_recent_post($FEEDS[0]).url.should == posts(:three).url
     end
   end
 
@@ -34,6 +28,10 @@ describe Post do
 
     it 'should skip feeds with no unread posts' do
       Post.most_recent_from_next_feed(posts(:two).url).should == posts(:three)
+    end
+
+    it 'should start from first feed for nil' do
+      Post.most_recent_from_next_feed.should == posts(:three)
     end
   end
 end
