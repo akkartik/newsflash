@@ -89,7 +89,7 @@ update doesn't happen. WTF!?
 Also found that I did indeed need to strip surrounding quotes from rfeedparser
 output.
 =-=36 - Fri Jan 23 07:40:34 PST 2009
-Ah, it was quoting after all.
+Ah, it was quoting after all. Quotes in the URL confuse the browser.
 =-=37 - Fri Jan 23 07:45:42 PST 2009
 
 First call may need to skip empty feeds as well.
@@ -97,3 +97,4 @@ I'm making sure title and blog title aren't empty strings so we have something
 to click on. After the next crawl we can remove that code from the controller.
 =-=38 - Fri Jan 23 09:52:21 PST 2009
 =-=39 - Fri Jan 23 10:25:42 PST 2009
+=-=40 - Fri Jan 23 12:50:17 PST 2009

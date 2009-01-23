@@ -5,7 +5,7 @@ def atomPermalink(entry)
 end
 
 def stripQuotes(s)
-  s.gsub(/^['"]|['"]$/, '')
+  s.gsub(/^['"]|['"]$/, '') rescue ''
 end
 
 def updateAllFeeds
