@@ -96,3 +96,4 @@ First call may need to skip empty feeds as well.
 I'm making sure title and blog title aren't empty strings so we have something
 to click on. After the next crawl we can remove that code from the controller.
 =-=38 - Fri Jan 23 09:52:21 PST 2009
+=-=39 - Fri Jan 23 10:25:42 PST 2009

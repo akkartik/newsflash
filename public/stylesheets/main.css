@@ -1,4 +1,8 @@
 .nav {
-  margin-left: 2em;
+  margin: 1em 2em 2em 2em;
   background-color: #ccc;
+}
+
+.title {
+  font-size: 120%;
 }

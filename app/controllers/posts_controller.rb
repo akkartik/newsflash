@@ -1,12 +1,11 @@
 class PostsController < ApplicationController
-  after_filter :temporary_backpatch
-
   def show
     @post = Post.find_by_url(params[:url])
   end
 
   def index
     @post = Post.most_recent_from_next_feed
+    temporary_backpatch
   end
 
   def update
@@ -15,12 +14,12 @@ class PostsController < ApplicationController
     curr_post.save
 
     @post = Post.most_recent_from_next_feed(params[:url])
+    temporary_backpatch
   end
 
   private
-
   def temporary_backpatch
-    @title = "###" if @post.title.blank?
-    @home = "#" if @post.home.blank?
+    @title = @post.title.blank? ? "###" : @post.title
+    @home = @post.home.blank? ? "#" : @post.home
   end
 end
