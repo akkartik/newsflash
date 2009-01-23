@@ -89,3 +89,5 @@ update doesn't happen. WTF!?
 Also found that I did indeed need to strip surrounding quotes from rfeedparser
 output.
 =-=36 - Fri Jan 23 07:40:34 PST 2009
+Ah, it was quoting after all.
+=-=37 - Fri Jan 23 07:45:42 PST 2009
