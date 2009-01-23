@@ -77,3 +77,8 @@ Maybe sql-escape and unescape.
 Nope, that's not it.
 Done with one iteration of the crawler.
 =-=33 - Thu Jan 22 19:36:39 PST 2009
+
+Done with the update link to go to the next post. But the browser seems to
+have trouble with repeated Element.replace on the same object. Is it the fact
+that the id is actually changing itself? Let's try replace_html instead.
+=-=34 - Fri Jan 23 07:29:31 PST 2009

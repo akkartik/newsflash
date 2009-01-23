@@ -1,5 +1,9 @@
-<h3><%= @post.title %></h3>
-<%= @post.contents %>
+<div id='curr_post'>
+  <div class='nav'>
+    <div class='title'><%= link_to @post.title, @post.url %></div>
+    <div class='subtitle'><%= link_to @post.home, @post.homeurl %></div>
+  </div>
 
-<%= link_to_remote("next&rarr;", :url => formatted_post_path(@post, :js), :with => "'url=#{@post.url}&next=true'") %>
-<!-- %= link_to_remote("edit tags&rarr;", :url => formatted_edit_user_profile_path(@user, :js), :with => "'field=tags'", :method => :get, :loading => show_spinner('tags'), :html => { :id => 'profile_edit_tags'}) % -->
+<%= @post.contents %>
+<%= link_to_remote("next&rarr;", :url => formatted_post_path(@post, :js), :method => :put, :with => "'url=#{@post.url}&next=true'") %>
+</div>
