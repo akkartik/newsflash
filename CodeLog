@@ -74,3 +74,6 @@ Clean.
 Crawler. I need a way to detect illegal junk that's going to throw off sql.
 Maybe sql-escape and unescape.
 =-=32 - Thu Jan 22 10:46:34 PST 2009
+Nope, that's not it.
+Done with one iteration of the crawler.
+=-=33 - Thu Jan 22 19:36:39 PST 2009

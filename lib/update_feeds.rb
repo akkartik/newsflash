@@ -19,10 +19,10 @@ def updateAllFeeds
       description = "" if description.length <= 10
       url = entry.link || atomPermalink(entry)
       title = entry.title
-      p title.length
-      title = "" if title.length <= 10
+      title = "" if title.nil? || title.length <= 10
 
-      fields = {:url => url, :title => title, :contents => description,
+      fields = {:url => url, :title => title,
+          :contents => description,
           :feedurl => feedUrl, :homeurl => parsedFeed.channel.link, :home => parsedFeed.channel.title}
       post = Post.find_or_create_by_url fields
       post.update_attributes fields
