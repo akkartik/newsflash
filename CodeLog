@@ -98,3 +98,8 @@ to click on. After the next crawl we can remove that code from the controller.
 =-=38 - Fri Jan 23 09:52:21 PST 2009
 =-=39 - Fri Jan 23 10:25:42 PST 2009
 =-=40 - Fri Jan 23 12:50:17 PST 2009
+
+Gotta escape url params for javascript:
+  http://www.spacevatican.org/2008/5/17/with-or-without-you-link_to_remote-s-mysterious-parameter
+via google: 'link_to_remote encodeURIcomponent'
+=-=41 - Fri Jan 23 18:01:30 PST 2009

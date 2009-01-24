@@ -9,7 +9,9 @@ class PostsController < ApplicationController
   end
 
   def update
+    p params[:url]
     curr_post = Post.find_by_url(params[:url])
+    p curr_post
     curr_post.doneReading = true
     curr_post.save
 

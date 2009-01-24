@@ -1,4 +1,8 @@
-<%= link_to_remote("flip", :url => formatted_post_path(@post, :js), :method => :put, :with => "'url=#{@post.url}'") %>
+<a href="#" onclick="new Ajax.Request('/posts/345.js', {asynchronous:true, evalScripts:true, method:'put', parameters:'url='+encodeURIComponent('http://www.artima.com/weblogs/viewpost.jsp?thread=247928') + '&amp;authenticity_token=' + encodeURIComponent('3dbb1e47dff5f288e6e73cb391a4b6c7080167b1')}); return false;">XXX</a>
+<a onclick="new Ajax.Request('/posts/313.js', {asynchronous:true, evalScripts:true, method:'put', parameters:'url=http://www.annezelenka.com/2009/01/algebra-i-activity-bungee-barbie' + '&amp;authenticity_token=' + encodeURIComponent('3dbb1e47dff5f288e6e73cb391a4b6c7080167b1')}); return false;" href="#">YYY</a>
+<p/>
+
+<%= link_to_remote("flip", :url => formatted_post_path(@post, :js), :method => :put, :with => "'url='+encodeURIComponent('#{@post.url}')") %>
 <div class='nav'>
   <div class='title'><%= link_to @title, @post.url %></div>
   <div class='subtitle'><%= link_to @home, @post.homeurl %></div>
