@@ -103,3 +103,5 @@ Gotta escape url params for javascript:
   http://www.spacevatican.org/2008/5/17/with-or-without-you-link_to_remote-s-mysterious-parameter
 via google: 'link_to_remote encodeURIcomponent'
 =-=41 - Fri Jan 23 18:01:30 PST 2009
+Cleanup.
+=-=42 - Fri Jan 23 18:05:01 PST 2009
