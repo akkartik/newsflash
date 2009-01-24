@@ -1,8 +1,22 @@
+.flip {
+  position: absolute; 
+  margin: 0;
+  width: 50px; 
+  height: 90%;
+  background-color: #44c; 
+}
+
+.content {
+  padding-left: 60px;
+}
+
 .nav {
-  margin: 1em 2em 2em 2em;
   background-color: #ccc;
+}
+.innernav {
+  padding: 10px 10px 10px 10px;
 }
 
 .title {
-  font-size: 120%;
+  font-size: 250%;
 }

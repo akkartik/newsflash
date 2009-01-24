@@ -1,7 +1,13 @@
-<%= link_to_remote("flip", :url => formatted_post_path(@post, :js), :method => :put, :with => "'url='+encodeURIComponent('#{@post.url}')") %>
-<div class='nav'>
-  <div class='title'><%= link_to @title, @post.url %></div>
-  <div class='subtitle'><%= link_to @home, @post.homeurl %></div>
-</div>
+<%= link_to_remote("", :url => formatted_post_path(@post, :js), :method => :put, :with => "'url='+encodeURIComponent('#{@post.url}')", :html => {:class => 'flip'}) %>
+<div class='content'>
+  <div class='nav'>
+    <div class='innernav'>
+      <div class='title'><%= link_to @title, @post.url %></div>
+      <div class='subtitle'><%= link_to @home, @post.homeurl %></div>
+    </div>
+  </div>
 
-<%= @post.contents %>
+  <div style='font-size: <%= fontSize(@post.contents) %>%'>
+  <%= @post.contents %>
+  </div>
+</div>
