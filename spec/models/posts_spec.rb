@@ -3,6 +3,12 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe Post do
   before(:each) do resetFeeds; end
 
+  describe 'new' do
+    it 'should lookup columns from files' do
+      Post.find_by_url(posts(:one).url).should be_skipped
+    end
+  end
+
   describe 'most_recent_post' do
     it 'should return most recent unread post for a feed' do
       Post.most_recent_post($FEEDS[0]).url.should == posts(:three).url

@@ -33,7 +33,6 @@ four:
   home: Blog two
   feedurl: http://two.example.com/atom.xml
   contents: body four
-  doneReading: true
 
 five:
   id: 5
@@ -43,7 +42,6 @@ five:
   home: Blog one
   feedurl: http://one.example.com/atom.xml
   contents: body five
-  doneReading: true
 
 six:
   id: 6
@@ -62,4 +60,3 @@ seven:
   home: Blog three
   feedurl: http://three.example.com/atom.xml
   contents: body seven
-  doneReading: true

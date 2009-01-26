@@ -76,3 +76,4 @@ end
 
 FEED_FILE = RAILS_ROOT+'/config/feeds'
 $FEEDS = File.new(FEED_FILE).read.split
+$METRICS_DIR = RAILS_ROOT+'/db/columns'

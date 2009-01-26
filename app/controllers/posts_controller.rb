@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
   def update
     curr_post = Post.find_by_url(params[:url])
-    curr_post.doneReading = true
+    curr_post.done = true
     curr_post.save
 
     @post = Post.most_recent_from_next_feed(params[:url])

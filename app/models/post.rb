@@ -1,4 +1,18 @@
+POST_COLUMNS = ['done', 'read', 'skipped', 'junk']
 class Post < ActiveRecord::Base
+  def read?
+    column_set? 'read'
+  end
+  def done?
+    column_set? 'done'
+  end
+  def skipped?
+    column_set? 'skipped'
+  end
+  def junk?
+    column_set? 'junk'
+  end
+
   def self.most_recent_post(feedUrl)
     Post.find :first, :conditions => ["feedurl = ? and doneReading = 'f'", feedUrl], :order => "id desc"
   end
@@ -26,5 +40,9 @@ class Post < ActiveRecord::Base
 
   def self.next_feed_index(idx)
     idx.nil? ? 0 : ((idx+1) % $FEEDS.length)
+  end
+
+  def column_set?(col)
+    `grep -c #{@url} #{$METRICS_DIR}/#{col}` > 0
   end
 end

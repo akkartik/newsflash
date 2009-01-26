@@ -7,7 +7,6 @@ class CreatePosts < ActiveRecord::Migration
       t.string :homeurl
       t.string :feedurl
       t.text :contents
-      t.boolean :doneReading, :default => false
       t.timestamps
     end
   end

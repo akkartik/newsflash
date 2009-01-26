@@ -18,9 +18,9 @@ describe PostsController do
   end
 
   describe 'update' do
-    it 'should update doneReading flag' do
+    it 'should update done flag' do
       put :update, :id => '0', :url => posts(:one).url
-      Post.find_by_url(posts(:one).url).doneReading.should be_true
+      Post.find_by_url(posts(:one).url).should be_done
     end
 
     it 'should show most recent piece from _next_ feed' do
