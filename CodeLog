@@ -114,3 +114,7 @@ b) Make flip a long, clickable margin on the left for fitt's law.
 Experimented with moving doneReading column out of the db. But keep a done
 column in db, and set the kind of done metric in $METRICS_DIR.
 =-=44 - Sun Jan 25 20:53:23 PST 2009
+I forgot that the difficulty of merging sqlite3 files across crawls was the
+whole reason to remove done fields from db.
+Ok, we'll do a select-all. For a single feed it'll never be too bad.
+=-=45 - Mon Jan 26 10:37:31 PST 2009

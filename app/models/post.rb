@@ -12,9 +12,13 @@ class Post < ActiveRecord::Base
   def junk?
     column_set? 'junk'
   end
+  def set_done
+    set_column 'done'
+  end
 
   def self.most_recent_post(feedUrl)
-    Post.find :first, :conditions => ["feedurl = ? and doneReading = 'f'", feedUrl], :order => "id desc"
+    Post.find(:all, :conditions => ["feedurl = ?", feedUrl], :order => "id desc").
+        collect{|post| return post if !post.done?}[0]
   end
 
   def self.feed_for_post(url)
@@ -43,6 +47,10 @@ class Post < ActiveRecord::Base
   end
 
   def column_set?(col)
-    `grep -c #{@url} #{$METRICS_DIR}/#{col}` > 0
+    `grep -c #{url} #{$METRICS_DIR}/#{col}`.to_i > 0
+  end
+
+  def set_column(col)
+    `echo #{url} >> #{$METRICS_DIR}/#{col}` unless column_set?(col)
   end
 end

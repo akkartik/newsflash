@@ -46,6 +46,8 @@ Spec::Runner.configure do |config|
   # For more information take a look at Spec::Runner::Configuration and Spec::Runner
 end
 
-def resetFeeds
-  $FEEDS = ['http://one.example.com/atom.xml', 'http://two.example.com/atom.xml', 'http://three.example.com/atom.xml']
+$METRICS_DIR = "/tmp/agg2"
+$FEEDS = ['http://one.example.com/atom.xml', 'http://two.example.com/atom.xml', 'http://three.example.com/atom.xml']
+def resetFixtures
+  `rsync -avz --delete spec/file_fixtures/ #{$METRICS_DIR}`
 end

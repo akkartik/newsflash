@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe PostsController do
-  before(:each) do resetFeeds; end
+  before(:each) do resetFixtures; end
 
   describe 'show' do
     it 'should show given piece' do

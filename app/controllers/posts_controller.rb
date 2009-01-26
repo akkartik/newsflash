@@ -9,9 +9,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    curr_post = Post.find_by_url(params[:url])
-    curr_post.done = true
-    curr_post.save
+    Post.find_by_url(params[:url]).set_done
 
     @post = Post.most_recent_from_next_feed(params[:url])
     temporary_backpatch

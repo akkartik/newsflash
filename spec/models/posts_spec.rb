@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Post do
-  before(:each) do resetFeeds; end
+  before(:each) do resetFixtures; end
 
   describe 'new' do
     it 'should lookup columns from files' do
@@ -12,6 +12,10 @@ describe Post do
   describe 'most_recent_post' do
     it 'should return most recent unread post for a feed' do
       Post.most_recent_post($FEEDS[0]).url.should == posts(:three).url
+    end
+
+    it 'should return nil when no posts remain unread' do
+      Post.most_recent_post($FEEDS[2]).should be_nil
     end
   end
 
@@ -38,6 +42,16 @@ describe Post do
 
     it 'should start from first feed for nil' do
       Post.most_recent_from_next_feed.should == posts(:three)
+    end
+  end
+
+  describe 'set_done' do
+    it 'should set done flag in column file' do
+      p = Post.find_by_url posts(:one).url
+      p.should_not be_done
+      p.set_done
+      # Don't need to save!
+      p.should be_done
     end
   end
 end
