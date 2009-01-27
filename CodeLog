@@ -118,3 +118,4 @@ I forgot that the difficulty of merging sqlite3 files across crawls was the
 whole reason to remove done fields from db.
 Ok, we'll do a select-all. For a single feed it'll never be too bad.
 =-=45 - Mon Jan 26 10:37:31 PST 2009
+=-=46 - Tue Jan 27 12:49:25 PST 2009

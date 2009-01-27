@@ -47,10 +47,10 @@ class Post < ActiveRecord::Base
   end
 
   def column_set?(col)
-    `grep -c #{url} #{$METRICS_DIR}/#{col}`.to_i > 0
+    `grep -c \"#{url}\" #{$METRICS_DIR}/#{col}`.to_i > 0
   end
 
   def set_column(col)
-    `echo #{url} >> #{$METRICS_DIR}/#{col}` unless column_set?(col)
+    `echo \"#{url}\" >> #{$METRICS_DIR}/#{col}` unless column_set?(col)
   end
 end
