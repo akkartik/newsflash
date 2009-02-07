@@ -127,3 +127,5 @@ Update feed list before crawling.
 It takes too much memory to run as a daemon. Don't even bother with a daily
 cron job. Let's see how often we find ourselves downloading the db first.
 =-=48 - Fri Feb  6 18:15:00 PST 2009
+It often hangs and I can't be choosing logging or status.
+=-=49 - Fri Feb  6 20:18:54 PST 2009

@@ -11,6 +11,7 @@ end
 def updateAllFeeds
   $FEEDS.each do |feedUrl|
     puts feedUrl
+    $stdout.flush
     begin
       parsedFeed = rfp(feedUrl)
     rescue Timeout::Error
