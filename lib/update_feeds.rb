@@ -36,12 +36,3 @@ def updateAllFeeds
     end
   end
 end
-
-def feedUpdateDaemon
-  while(1)
-    reloadFeedList
-    updateAllFeeds
-    puts "sleeping"
-    sleep 60*60*23
-  end
-end
