@@ -129,3 +129,6 @@ cron job. Let's see how often we find ourselves downloading the db first.
 =-=48 - Fri Feb  6 18:15:00 PST 2009
 It often hangs and I can't be choosing logging or status.
 =-=49 - Fri Feb  6 20:18:54 PST 2009
+
+Figured out how to unescape html.
+=-=50 - Wed Feb 11 21:47:18 PST 2009

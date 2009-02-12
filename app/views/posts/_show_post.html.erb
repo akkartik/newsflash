@@ -8,6 +8,6 @@
   </div>
 
   <div style='font-size: <%= fontSize(@post.contents) %>%'>
-  <%= @post.contents %>
+  <%= CGI.unescapeHTML @post.contents %>
   </div>
 </div>
