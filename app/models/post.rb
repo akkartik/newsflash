@@ -43,7 +43,9 @@ class Post < ActiveRecord::Base
   private
 
   def self.next_feed_index(idx)
-    idx.nil? ? 0 : ((idx+1) % $FEEDS.length)
+    return 0 if idx.nil?
+    return rand($FEEDS.length) if idx >= $RANDOM
+    return (idx+1) % $FEEDS.length
   end
 
   def column_set?(col)

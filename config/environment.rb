@@ -79,5 +79,6 @@ $METRICS_DIR = RAILS_ROOT+'/db/columns'
 
 def reloadFeedList
   $FEEDS = File.new(FEED_FILE).read.split
+  $RANDOM = $FEEDS.index("RANDOM")
 end
 reloadFeedList
