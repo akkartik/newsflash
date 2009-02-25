@@ -1,3 +1,0 @@
-#!/usr/bin/zsh
-
-rake --trace feeds:update $* 2>err
