@@ -1,3 +1,5 @@
+NewsFlash -- http://akkartik.name/newsflash
+
 $ mkdir db/columns
 
 Add your RSS feeds into db/columns/feeds
@@ -5,7 +7,6 @@ Add your RSS feeds into db/columns/feeds
 $ rake --trace feeds:update
 You may need to install http://rfeedparser.rubyforge.org
 
-Start your server:
 $ script/server
 
-Go to localhost:3000
+Point your browser at localhost:3000
